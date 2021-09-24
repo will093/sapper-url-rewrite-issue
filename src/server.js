@@ -19,7 +19,7 @@ const rewriteUrl = () => {
 };
 
 
-express() // You can also use Express
+express()
 	.use(
 		compression({ threshold: 0 }),
 		sirv('static', { dev }),
