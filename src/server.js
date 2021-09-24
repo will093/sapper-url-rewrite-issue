@@ -8,9 +8,8 @@ const dev = NODE_ENV === 'development';
 
 const rewriteUrl = () => {
   return (req, res, next) => {
-		console.log('url', req.url)
-    if (req.url === "/") {
-      req.url = `/blog`;
+    if (req.url === "/about2") {
+      req.url = req.originalUrl = `/about`;
       next("route");
     } else {
       next();
